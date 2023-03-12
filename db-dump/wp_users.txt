@@ -1,0 +1,1 @@
+1	admin	$P$BYoJQRJaZQuB6bB9YdGcn5AaCee0jv0	admin	errado@errou.feio	http://localhost:8283	2023-03-12 23:03:35		0	admin

@@ -1,0 +1,2 @@
+1	2	_wp_page_template	default
+2	3	_wp_page_template	default
