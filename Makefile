@@ -33,5 +33,7 @@ restore-db: ## restore database from repo
 
 start-stack: dcsu restore-db dcl ## initialize stack running all necessary scripts
 
+pre-commit: backup-db ## run necessary commands before commit
+
 exec-db: ## run dodcker-compose exec db bash
 	docker-compose exec db bash
