@@ -25,9 +25,8 @@ dcsu: dcs dcu ## Run docker-compose stop && up
 dcsul: dcs dcu dcl ## Run docker-compose stop && up && logs
 
 backup-db: ## backup database in repo
-# based https://stackoverflow.com/questions/3669121/dump-all-mysql-tables-into-separate-files-automatically
 	docker-compose exec -u root db chmod -R 777 /opt/backup
-	docker-compose exec db mysqldump --user=root --password=${DB_ROOT_PASSWORD} --tab=/opt/backup ${DB_NAME}
+	docker-compose exec db /opt/scripts/backup.sh
 
 restore-db: ## restore database from repo
 	docker-compose exec db /opt/scripts/restore.sh
